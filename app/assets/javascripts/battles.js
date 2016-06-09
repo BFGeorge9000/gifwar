@@ -30,18 +30,18 @@ var eventHandlers = function() {
       if(form.is(":visible")) {
         form.hide();
         comment.show();
-        clickEvent.target.innerText = "Edit";
+        // clickEvent.target.innerText = "Edit";
         prev_form = null;
         prev_comment = null;
         prev_target = null;
       } else {
         form.show();
         comment.hide();
-        clickEvent.target.innerText = "Cancel";
+        // clickEvent.target.innerText = "Cancel";
         if(prev_form != null){
           prev_form.hide();
           prev_comment.show();
-          prev_target.innerText = "Edit"
+          // prev_target.innerText = "Edit"
         }
         prev_form = form;
         prev_comment = comment;
