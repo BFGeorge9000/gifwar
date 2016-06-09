@@ -1,22 +1,22 @@
-%ul.tabs#dashboard-tabs{:"data-tabs" => "data-tabs"}
+%ul.dashboard.tabs#dashboard-tabs{:"data-tabs" => "data-tabs"}
   %li.tabs-title.is-active
     %a{:"href" => "#battles_panel", :"aria-selected" => "true"}
-      Battles
+      %h3
+        Battles
   %li.tabs-title
     %a{:"href" => "#leaderboard_panel"}
-      Leaderboard
-
-.tabs-content{:"data-tabs-content" => "dashboard-tabs"}
-  .tabs-panel.is-active#battles_panel
-    %p
-      %h1
-        Battles
-      %h3= link_to @current_battle.topic, @current_battle
-      - @other_battles.each do |battle|
-        %div= link_to battle.topic, battle
-  .tabs-panel#leaderboard_panel
-    %p
-      %h1
+      %h3
         Leaderboard
-      - @users.each do |user|
-        %div= user.full_name
+
+.dashboard.tabs-content{:"data-tabs-content" => "dashboard-tabs"}
+  .tabs-panel.is-active#battles_panel
+    %h1
+      Battles
+    %h3= link_to @current_battle.topic, @current_battle
+    - @other_battles.each do |battle|
+      %div= link_to battle.topic, battle
+  .tabs-panel#leaderboard_panel
+    %h1
+      Leaderboard
+    - @users.each do |user|
+      %div= user.full_name
