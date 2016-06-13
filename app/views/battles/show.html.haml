@@ -5,10 +5,10 @@
         .user-section
           = image_tag(@battle.created_by.avatar_url, class: "avatar")
           %br
-          %strong= @battle.created_by.full_name
+          .full-name= @battle.created_by.full_name
       .columns{class: "#{@battle.won? ? "small-8" : "small-10"}"}
-        %h1= @battle.topic
-        %h3= text_with_images @battle.description
+        .topic= @battle.topic
+        .description= text_with_images @battle.description
       - if @battle.won?
         .columns.small-2
           %strong WINNER:

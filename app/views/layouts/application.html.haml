@@ -7,6 +7,7 @@
 
     %title= "Gifwar! #{yield(:title) if content_for?(:title)}"
 
+    = google_webfonts_init({google:['Press Start 2P']})
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tag
@@ -58,6 +59,8 @@
             .top-bar{"data-btm-anchor" => "content:bottom", "data-options" => "marginTop:0;", :"data-sticky" => true, "data-top-anchor" => "1"}
               .top-bar-left.small-12.columns
                 %button.left{"data-toggle" => "offCanvas", :type => "button"}= fa_icon "bars"
+              .top-bar-right
+                GIFWAR!
           = yield :bottom_bar
           %article
             .small-12

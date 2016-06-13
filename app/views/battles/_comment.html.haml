@@ -4,7 +4,7 @@
       .large-2.columns.user-section
         = image_tag(comment.user.avatar_url, class: "avatar")
         %br
-        %strong= comment.user.full_name
+        .full-name= comment.user.full_name
       .large-10.columns
         .comment-text{ "id" => "comment-#{comment.id}"}= text_with_images comment.body
         = form_for(Comment.find(comment.id), html: {id: "edit-comment-#{comment.id}", class: "edit-comment-form"}) do |f|

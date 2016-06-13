@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'haml-rails'
 gem 'foundation-rails'
 gem 'font-awesome-rails'
+gem 'google-webfonts-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

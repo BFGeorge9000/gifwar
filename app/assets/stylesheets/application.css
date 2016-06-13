@@ -37,6 +37,7 @@ article,body,html,.off-canvas-wrapper,.off-canvas-wrapper-inner,.off-canvas,.off
 
 .top-bar{
   width: 100%;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .new-comment-field{
@@ -44,4 +45,26 @@ article,body,html,.off-canvas-wrapper,.off-canvas-wrapper-inner,.off-canvas,.off
   width:100%;
   position: fixed;
   bottom: 0;
+}
+
+
+.battle-header{
+  padding: 1em;
+}
+
+.topic{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.description{
+  font-size: 1.5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.full-name{
+  font-family: 'Press Start 2P', cursive;
 }
