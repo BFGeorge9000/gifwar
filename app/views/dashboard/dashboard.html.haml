@@ -19,4 +19,4 @@
     %h1
       Leaderboard
     - @users.each do |user|
-      %div= user.full_name
+      = render partial: "user", locals:{user: user}
