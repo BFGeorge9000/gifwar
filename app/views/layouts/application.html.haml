@@ -27,6 +27,8 @@
             %ul.vertical.menu{:"data-accordion-menu" => true}
               - if @menu_current_battles.present?
                 %li
+                  = link_to "DASHBOARD", root_path
+                %li
                   = link_to "CURRENT BATTLES", "#"
                   %ul.menu.vertical.nested
                     - @menu_current_battles.each do |battle|

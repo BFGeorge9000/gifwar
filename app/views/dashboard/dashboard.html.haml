@@ -1,6 +1,22 @@
-%h1 Hi!
-- @users.each do |user|
-  %div= user.full_name
-%h1= link_to @current_battle.topic, @current_battle
-- @other_battles.each do |battle|
-  %div= link_to battle.topic, battle
+%ul.dashboard.tabs#dashboard-tabs{:"data-tabs" => "data-tabs"}
+  %li.tabs-title.is-active
+    %a{:"href" => "#battles_panel", :"aria-selected" => "true"}
+      %h3
+        Battles
+  %li.tabs-title
+    %a{:"href" => "#leaderboard_panel"}
+      %h3
+        Leaderboard	
+
+.dashboard.tabs-content{:"data-tabs-content" => "dashboard-tabs"}
+  .tabs-panel.is-active#battles_panel
+    %h1
+      Battles
+    %h3= link_to @current_battle.topic, @current_battle
+    - @other_battles.each do |battle|
+      %div= link_to battle.topic, battle
+  .tabs-panel#leaderboard_panel
+    %h1
+      Leaderboard
+    - @users.each do |user|
+      = render partial: "user", locals:{user: user}
